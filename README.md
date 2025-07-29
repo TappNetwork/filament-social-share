@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/tapp/filament-social-share.svg?style=flat-square)](https://packagist.org/packages/TappNetwork/filament-social-share)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/TappNetwork/filament-social-share/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/TappNetwork/filament-social-share/actions?query=workflow%3Arun-tests+branch%3Amain)
-![GitHub Code Style Action Status](https://github.com/tapp/filament-social-share/actions/workflows/fix-php-code-style-issues.yml/badge.svg)
+![GitHub Code Style Action Status](https://github.com/TappNetwork/filament-social-share/actions/workflows/fix-php-code-style-issues.yml/badge.svg)
 [![Total Downloads](https://img.shields.io/packagist/dt/tapp/filament-social-share.svg?style=flat-square)](https://packagist.org/packages/TappNetwork/filament-social-share)
 
 An action that allows users to share the current URL (or provide a custom one) on social media platforms, through email, or copy the link. It could be also used the web share API (supported by certain browsers).
