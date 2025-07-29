@@ -2,7 +2,6 @@
 
 namespace Tapp\FilamentSocialShare\Tests;
 
-use Tapp\FilamentSocialShare\FilamentSocialShareServiceProvider;
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
 use Filament\Actions\ActionsServiceProvider;
@@ -16,6 +15,7 @@ use Filament\Widgets\WidgetsServiceProvider;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
+use Tapp\FilamentSocialShare\FilamentSocialShareServiceProvider;
 
 class TestCase extends Orchestra
 {
