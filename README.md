@@ -61,7 +61,7 @@ The share action can open the native browser share or a Filament modal with opti
 Add the `->nativeBrowserShare()` to display the native browser share:
 
 ```php
-use Tapp\FilamentSocialShare\SocialShareAction;
+use Tapp\FilamentSocialShare\Actions\SocialShareAction;
 
 SocialShareAction::make()
     ->nativeBrowserShare()
@@ -72,7 +72,7 @@ SocialShareAction::make()
 When `->nativeBrowserShare()` is not provided a modal will be opened with options to share on social plataforms or email. The social plataforms available are in the example below:
 
 ```php
-use Tapp\FilamentSocialShare\SocialShareAction;
+use Tapp\FilamentSocialShare\Actions\SocialShareAction;
 
 SocialShareAction::make()
     ->x()
@@ -96,7 +96,7 @@ Default is current URL.
 Provide a custom URL to share:
 
 ```php
-use Tapp\FilamentSocialShare\SocialShareAction;
+use Tapp\FilamentSocialShare\Actions\SocialShareAction;
 
 SocialShareAction::make()
     ->urlToShare('https://github.com/TappNetwork/filament-social-share')
@@ -109,7 +109,7 @@ Default is the title.
 Provide the text to share:
 
 ```php
-use Tapp\FilamentSocialShare\SocialShareAction;
+use Tapp\FilamentSocialShare\Actions\SocialShareAction;
 
 SocialShareAction::make()
     ->text('Social Share Filament Plugin')
@@ -120,7 +120,7 @@ SocialShareAction::make()
 To add X share button, add the x method providing the user:
 
 ```php
-use Tapp\FilamentSocialShare\SocialShareAction;
+use Tapp\FilamentSocialShare\Actions\SocialShareAction;
 
 SocialShareAction::make()
     ->x()
@@ -147,7 +147,7 @@ SocialShareAction::make()
 To add Facebook share button:
 
 ```php
-use Tapp\FilamentSocialShare\SocialShareAction;
+use Tapp\FilamentSocialShare\Actions\SocialShareAction;
 
 SocialShareAction::make()
     ->facebook()
@@ -174,7 +174,7 @@ SocialShareAction::make()
 To add LinkedIn share button:
 
 ```php
-use Tapp\FilamentSocialShare\SocialShareAction;
+use Tapp\FilamentSocialShare\Actions\SocialShareAction;
 
 SocialShareAction::make()
     ->linkedin()
@@ -201,7 +201,7 @@ SocialShareAction::make()
 To add Reddit share button:
 
 ```php
-use Tapp\FilamentSocialShare\SocialShareAction;
+use Tapp\FilamentSocialShare\Actions\SocialShareAction;
 
 SocialShareAction::make()
     ->reddit()
@@ -228,7 +228,7 @@ SocialShareAction::make()
 To add Email share button:
 
 ```php
-use Tapp\FilamentSocialShare\SocialShareAction;
+use Tapp\FilamentSocialShare\Actions\SocialShareAction;
 
 SocialShareAction::make()
     ->email()
@@ -255,7 +255,7 @@ SocialShareAction::make()
 Enable native browser Web Share API:
 
 ```php
-use Tapp\FilamentSocialShare\SocialShareAction;
+use Tapp\FilamentSocialShare\Actions\SocialShareAction;
 
 SocialShareAction::make()
     ->nativeBrowserShare()
@@ -266,7 +266,7 @@ SocialShareAction::make()
 Add custom logic before or after the sharing process:
 
 ```php
-use Tapp\FilamentSocialShare\SocialShareAction;
+use Tapp\FilamentSocialShare\Actions\SocialShareAction;
 use Filament\Notifications\Notification;
 
 SocialShareAction::make()
@@ -370,7 +370,7 @@ if ($user->is_premium) {
 Any method available to Filament action can be used, for example, to use an icon instead of button for share action:
 
 ```php
-use Tapp\FilamentSocialShare\SocialShareAction;
+use Tapp\FilamentSocialShare\Actions\SocialShareAction;
 
  SocialShareAction::make()
     ->facebook()
@@ -389,7 +389,7 @@ Example: Send Notification After Sharing
 
 ```php
 use Filament\Notifications\Notification;
-use Tapp\FilamentSocialShare\SocialShareAction;
+use Tapp\FilamentSocialShare\Actions\SocialShareAction;
 
 SocialShareAction::make()
     ->facebook()
@@ -408,7 +408,7 @@ Example: Log Sharing Activity
 
 ```php
 use Illuminate\Support\Facades\Log;
-use Tapp\FilamentSocialShare\SocialShareAction;
+use Tapp\FilamentSocialShare\Actions\SocialShareAction;
 
 SocialShareAction::make()
     ->facebook()
@@ -431,7 +431,7 @@ Example: Custom Authorization Check
 
 ```php
 use Filament\Notifications\Notification;
-use Tapp\FilamentSocialShare\SocialShareAction;
+use Tapp\FilamentSocialShare\Actions\SocialShareAction;
 
 SocialShareAction::make()
     ->facebook()
@@ -453,7 +453,7 @@ SocialShareAction::make()
 Example: Track Analytics
 
 ```php
-use Tapp\FilamentSocialShare\SocialShareAction;
+use Tapp\FilamentSocialShare\Actions\SocialShareAction;
 
 SocialShareAction::make()
     ->facebook()
