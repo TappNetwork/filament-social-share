@@ -14,7 +14,7 @@ class SocialShareAction extends Action
 
     protected ?string $text = null;
 
-    protected bool|\Closure $x = false;
+    protected bool | \Closure $x = false;
 
     protected ?string $xIcon = null;
 
@@ -24,7 +24,7 @@ class SocialShareAction extends Action
 
     protected string $xUrl;
 
-    protected bool|Closure $facebook = false;
+    protected bool | Closure $facebook = false;
 
     protected ?string $facebookIcon = null;
 
@@ -32,7 +32,7 @@ class SocialShareAction extends Action
 
     protected ?string $facebookColor = null;
 
-    protected bool|Closure $reddit = false;
+    protected bool | Closure $reddit = false;
 
     protected ?string $redditIcon = null;
 
@@ -40,7 +40,7 @@ class SocialShareAction extends Action
 
     protected ?string $redditColor = null;
 
-    protected bool|Closure $linkedin = false;
+    protected bool | Closure $linkedin = false;
 
     protected ?string $linkedinIcon = null;
 
@@ -48,7 +48,7 @@ class SocialShareAction extends Action
 
     protected ?string $linkedinColor = null;
 
-    protected bool|Closure $email = false;
+    protected bool | Closure $email = false;
 
     protected ?string $emailIcon = null;
 
@@ -56,7 +56,7 @@ class SocialShareAction extends Action
 
     protected ?string $emailColor = null;
 
-    protected bool|Closure $nativeBrowserShare = false;
+    protected bool | Closure $nativeBrowserShare = false;
 
     protected ?Closure $beforeCallback = null;
 
@@ -132,7 +132,7 @@ class SocialShareAction extends Action
         return $content;
     }
 
-    public function urlToShare(null|string|\Closure $urlToShare): static
+    public function urlToShare(null | string | \Closure $urlToShare): static
     {
         $this->urlToShare = $urlToShare;
 
@@ -161,7 +161,7 @@ class SocialShareAction extends Action
         return $this->evaluate($this->urlToShare);
     }
 
-    public function text(null|string|\Closure $text): static
+    public function text(null | string | \Closure $text): static
     {
         $this->text = $text;
 
@@ -173,13 +173,19 @@ class SocialShareAction extends Action
         return $this->evaluate($this->text);
     }
 
-    public function x(bool|\Closure $enabled = true, ?string $icon = null, ?string $tooltip = null, ?string $color = null): static
+    public function x(bool | \Closure $enabled = true, ?string $icon = null, ?string $tooltip = null, ?string $color = null): static
     {
         $this->x = $enabled;
 
-        if ($icon !== null) $this->xIcon = $icon;
-        if ($tooltip !== null) $this->xTooltip = $tooltip;
-        if ($color !== null) $this->xColor = $color;
+        if ($icon !== null) {
+            $this->xIcon = $icon;
+        }
+        if ($tooltip !== null) {
+            $this->xTooltip = $tooltip;
+        }
+        if ($color !== null) {
+            $this->xColor = $color;
+        }
 
         return $this;
     }
@@ -227,16 +233,22 @@ class SocialShareAction extends Action
 
     public function getXUrl(): string
     {
-        return "https://x.com/intent/tweet?url=" . urlencode($this->getUrlToShare()) . "&text=" . urlencode($this->getText() ?? 'Check out this content');
+        return 'https://x.com/intent/tweet?url=' . urlencode($this->getUrlToShare()) . '&text=' . urlencode($this->getText() ?? 'Check out this content');
     }
 
-    public function facebook(bool|\Closure $enabled = true, ?string $icon = null, ?string $tooltip = null, ?string $color = null): static
+    public function facebook(bool | \Closure $enabled = true, ?string $icon = null, ?string $tooltip = null, ?string $color = null): static
     {
         $this->facebook = $enabled;
 
-        if ($icon !== null) $this->facebookIcon = $icon;
-        if ($tooltip !== null) $this->facebookTooltip = $tooltip;
-        if ($color !== null) $this->facebookColor = $color;
+        if ($icon !== null) {
+            $this->facebookIcon = $icon;
+        }
+        if ($tooltip !== null) {
+            $this->facebookTooltip = $tooltip;
+        }
+        if ($color !== null) {
+            $this->facebookColor = $color;
+        }
 
         return $this;
     }
@@ -284,16 +296,22 @@ class SocialShareAction extends Action
 
     public function getFacebookUrl(): string
     {
-        return "https://www.facebook.com/sharer/sharer.php?u=" . urlencode($this->getUrlToShare());
+        return 'https://www.facebook.com/sharer/sharer.php?u=' . urlencode($this->getUrlToShare());
     }
 
-    public function reddit(bool|\Closure $enabled = true, ?string $icon = null, ?string $tooltip = null, ?string $color = null): static
+    public function reddit(bool | \Closure $enabled = true, ?string $icon = null, ?string $tooltip = null, ?string $color = null): static
     {
         $this->reddit = $enabled;
 
-        if ($icon !== null) $this->redditIcon = $icon;
-        if ($tooltip !== null) $this->redditTooltip = $tooltip;
-        if ($color !== null) $this->redditColor = $color;
+        if ($icon !== null) {
+            $this->redditIcon = $icon;
+        }
+        if ($tooltip !== null) {
+            $this->redditTooltip = $tooltip;
+        }
+        if ($color !== null) {
+            $this->redditColor = $color;
+        }
 
         return $this;
     }
@@ -341,16 +359,22 @@ class SocialShareAction extends Action
 
     public function getRedditUrl(): string
     {
-        return "http://www.reddit.com/submit?url=" . urlencode($this->getUrlToShare()) . "&title=" . urlencode($this->getText() ?? 'Check out this content');
+        return 'http://www.reddit.com/submit?url=' . urlencode($this->getUrlToShare()) . '&title=' . urlencode($this->getText() ?? 'Check out this content');
     }
 
-    public function linkedin(bool|\Closure $enabled = true, ?string $icon = null, ?string $tooltip = null, ?string $color = null): static
+    public function linkedin(bool | \Closure $enabled = true, ?string $icon = null, ?string $tooltip = null, ?string $color = null): static
     {
         $this->linkedin = $enabled;
 
-        if ($icon !== null) $this->linkedinIcon = $icon;
-        if ($tooltip !== null) $this->linkedinTooltip = $tooltip;
-        if ($color !== null) $this->linkedinColor = $color;
+        if ($icon !== null) {
+            $this->linkedinIcon = $icon;
+        }
+        if ($tooltip !== null) {
+            $this->linkedinTooltip = $tooltip;
+        }
+        if ($color !== null) {
+            $this->linkedinColor = $color;
+        }
 
         return $this;
     }
@@ -398,16 +422,22 @@ class SocialShareAction extends Action
 
     public function getLinkedinUrl(): string
     {
-        return "http://www.linkedin.com/shareArticle?mini=true&url=" . urlencode($this->getUrlToShare()) . "&title=" . urlencode($this->getText() ?? 'Check out this content');
+        return 'http://www.linkedin.com/shareArticle?mini=true&url=' . urlencode($this->getUrlToShare()) . '&title=' . urlencode($this->getText() ?? 'Check out this content');
     }
 
-    public function email(bool|\Closure $enabled = true, ?string $icon = null, ?string $tooltip = null, ?string $color = null): static
+    public function email(bool | \Closure $enabled = true, ?string $icon = null, ?string $tooltip = null, ?string $color = null): static
     {
         $this->email = $enabled;
 
-        if ($icon !== null) $this->emailIcon = $icon;
-        if ($tooltip !== null) $this->emailTooltip = $tooltip;
-        if ($color !== null) $this->emailColor = $color;
+        if ($icon !== null) {
+            $this->emailIcon = $icon;
+        }
+        if ($tooltip !== null) {
+            $this->emailTooltip = $tooltip;
+        }
+        if ($color !== null) {
+            $this->emailColor = $color;
+        }
 
         return $this;
     }
@@ -456,12 +486,12 @@ class SocialShareAction extends Action
     public function getEmailUrl(): string
     {
         $subject = urlencode($this->getText() ?? 'Check out this content');
-        $body = urlencode("Check out this content: " . $this->getUrlToShare());
+        $body = urlencode('Check out this content: ' . $this->getUrlToShare());
 
         return "mailto:?subject={$subject}&body={$body}";
     }
 
-    public function nativeBrowserShare(bool|\Closure $nativeBrowserShare = true): static
+    public function nativeBrowserShare(bool | \Closure $nativeBrowserShare = true): static
     {
         $this->nativeBrowserShare = $nativeBrowserShare;
 
@@ -495,7 +525,7 @@ class SocialShareAction extends Action
                 $this->evaluate($this->beforeCallback);
             }
 
-            $text = $this->getText() ?? "Check out this content";
+            $text = $this->getText() ?? 'Check out this content';
 
             $this->modalHeading(null);
             $this->modalContent(null);
@@ -504,10 +534,10 @@ class SocialShareAction extends Action
                 $livewire->js(
                     'navigator.share({
                         title: document.title,
-                        text: "'.$text.'",
-                        url: "'.$this->getUrlToShare().'"
+                        text: "' . $text . '",
+                        url: "' . $this->getUrlToShare() . '"
                     }).then(() => {
-                        $tooltip("'.__('Shared').'", { timeout: 1500 });
+                        $tooltip("' . __('Shared') . '", { timeout: 1500 });
                     }).catch((err) => {
                         console.log("Native sharing failed or cancelled:", err);
                     });'
