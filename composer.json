@@ -1,0 +1,75 @@
+{
+    "name": "tapp/filament-social-share",
+    "description": "Share a URL in social media platforms, email, or copy the URL",
+    "keywords": [
+        "Social Share",
+        "Social Share Links",
+        "Laravel",
+        "Filament",
+        "filament-social-share"
+    ],
+    "homepage": "https://github.com/tapp/filament-social-share",
+    "support": {
+        "issues": "https://github.com/tapp/filament-social-share/issues",
+        "source": "https://github.com/tapp/filament-social-share"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tapp Network",
+            "email": "andreia.bohner@tappnetwork.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "filament/filament": "^4.0",
+        "owenvoke/blade-fontawesome": "^2.9",
+        "spatie/laravel-package-tools": "^1.15.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^2.9||^3.0",
+        "laravel/pint": "^1.14",
+        "nunomaduro/collision": "^8.1.1||^7.10.0",
+        "orchestra/testbench": "^10.0.0||^9.0.0||^8.22.0",
+        "pestphp/pest": "^3.0||^2.34",
+        "pestphp/pest-plugin-arch": "^3.0||^2.7",
+        "pestphp/pest-plugin-laravel": "^3.0||^2.3",
+        "phpstan/extension-installer": "^1.3||^2.0",
+        "phpstan/phpstan-deprecation-rules": "^1.1||^2.0",
+        "phpstan/phpstan-phpunit": "^1.3||^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tapp\\FilamentSocialShare\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tapp\\FilamentSocialShare\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tapp\\FilamentSocialShare\\FilamentSocialShareServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
