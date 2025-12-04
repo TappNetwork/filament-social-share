@@ -10,9 +10,9 @@ use Illuminate\Contracts\View\View;
 
 class SocialShareAction extends Action
 {
-    protected ?string $urlToShare = null;
+    protected Closure| null | string $urlToShare = null;
 
-    protected ?string $text = null;
+    protected Closure| null | string $text = null;
 
     protected bool | \Closure $x = false;
 
