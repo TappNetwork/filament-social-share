@@ -12,7 +12,7 @@ class SocialShareAction extends Action
 {
     protected string | null | Closure $urlToShare = null;
 
-    protected ?string $text = null;
+    protected string | null | Closure $text = null;
 
     protected bool | \Closure $x = false;
 
