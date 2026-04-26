@@ -2,6 +2,20 @@
 
 All notable changes to `Filament Social Share` will be documented in this file.
 
+## v1.1.0 - 2026-04-26
+
+### What's Changed
+
+* Drop PHP 8.2, add PHP 8.5 and Laravel 13 support by @swilla in https://github.com/TappNetwork/filament-social-share/pull/15
+* Bump dependabot/fetch-metadata from 2.5.0 to 3.1.0 by @dependabot[bot] in https://github.com/TappNetwork/filament-social-share/pull/14
+* Bump ramsey/composer-install from 3 to 4 by @dependabot[bot] in https://github.com/TappNetwork/filament-social-share/pull/12
+
+### New Contributors
+
+* @swilla made their first contribution in https://github.com/TappNetwork/filament-social-share/pull/15
+
+**Full Changelog**: https://github.com/TappNetwork/filament-social-share/compare/v1.0.1...v1.1.0
+
 ## v1.0.1 - 2026-01-22
 
 ### What's Changed
