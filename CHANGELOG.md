@@ -2,6 +2,14 @@
 
 All notable changes to `Filament Social Share` will be documented in this file.
 
+## v1.1.1 - 2026-08-07
+
+### What's Changed
+
+* Allow `owenvoke/blade-fontawesome` ^3.0 for Laravel 13 compatibility
+
+**Full Changelog**: https://github.com/TappNetwork/filament-social-share/compare/v1.1.0...v1.1.1
+
 ## v1.1.0 - 2026-04-26
 
 ### What's Changed
